@@ -26,7 +26,7 @@ annotate view ZC_RAP_TRAVEL_VINEE with
         identification: [ { position: 10 } ],
         selectionField: [ { position: 10 } ] }
   TravelID;
-  
+
   @UI:{ lineItem:       [ { position: 20 } ],
         identification: [ { position: 20 } ],
         selectionField: [ { position: 20 } ] }
@@ -40,15 +40,15 @@ annotate view ZC_RAP_TRAVEL_VINEE with
   @UI:{ lineItem:       [ { position: 40 } ],
         identification: [ { position: 40 } ] }
   BeginDate;
-  
+
   @UI:{ lineItem:       [ { position: 50 } ],
         identification: [ { position: 50 } ] }
   EndDate;
-  
+
   @UI:{ lineItem:       [ { position: 60 } ],
         identification: [ { position: 60 } ] }
   BookingFee;
-  
+
   @UI:{ lineItem:       [ { position: 70 } ],
         identification: [ { position: 70 } ] }
   TotalPrice;
@@ -56,23 +56,29 @@ annotate view ZC_RAP_TRAVEL_VINEE with
   @UI:{ lineItem:       [ { position: 80 } ],
         identification: [ { position: 80 } ] }
   Description;
-  
-  @UI:{ lineItem:       [ { position: 90 } ],
-        identification: [ { position: 90 } ] }
+
+  @UI: {  lineItem:       [ { position: 90 },
+                            { type: #FOR_ACTION, dataAction: 'acceptTravel', label: 'Accept Travel' },
+                            { type: #FOR_ACTION, dataAction: 'rejectTravel', label: 'Reject Travel' }
+                          ],
+          identification: [ { position: 90 },
+                            { type: #FOR_ACTION, dataAction: 'acceptTravel', label: 'Accept Travel' },
+                            { type: #FOR_ACTION, dataAction: 'rejectTravel', label: 'Reject Travel' }
+                          ] }
   TravelStatus;
-  
+
   @UI.hidden: true
   CreatedBy;
-  
+
   @UI.hidden: true
   CreatedAt;
-  
+
   @UI.hidden: true
   LastChangedBy;
-  
+
   @UI.hidden: true
   LastChangedAt;
-  
+
   @UI.hidden: true
   LocalLastChangedAt;
 
