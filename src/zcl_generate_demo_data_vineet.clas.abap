@@ -12,7 +12,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_generate_demo_data_vineet IMPLEMENTATION.
+CLASS ZCL_GENERATE_DEMO_DATA_VINEET IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
 
     "delete existing data
@@ -74,5 +76,4 @@ CLASS zcl_generate_demo_data_vineet IMPLEMENTATION.
     out->write( 'Travel and Booking Demo Data Inserted.' ).
 
   ENDMETHOD.
-
 ENDCLASS.
