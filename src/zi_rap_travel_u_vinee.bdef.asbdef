@@ -3,7 +3,7 @@ define behavior for ZI_RAP_Travel_U_vinee alias Travel
 implementation in class zbp_i_rap_travel_u_vinee unique
 
 lock master
-etag master LastchangedAt
+//etag master LastchangedAt
 {
   create;
   update;
@@ -35,8 +35,8 @@ etag master LastchangedAt
 
 define behavior for ZI_RAP_Booking_U_VINEE alias Booking
 implementation in class zbp_i_rap_booking_u_vinee unique
-lock dependent by _Travel
-etag dependent by _Travel
+//lock dependent by _Travel
+//etag dependent by _Travel
 {
   update;
   delete;
